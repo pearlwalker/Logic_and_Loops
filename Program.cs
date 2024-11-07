@@ -32,27 +32,39 @@ namespace Logic_and_Loops
 
             //Ask player to choose path
             Console.WriteLine("Which direction will you go?");
-            Console.WriteLine("[Type 'left' to go left or 'right' to go right]\n");
+            Console.WriteLine("[Type your direction using lowercase letters]\n");
 
             //Grab more user input
             userChoice = Console.ReadLine();
             Console.WriteLine("You chose: " + userChoice);
 
             //Select our path
-            if (userChoice == "left" || userChoice == "LEFT" || userChoice == "west" || userChoice == "WEST")
+            if (userChoice == "left" || userChoice == "west")
             {
                 //go left
-                if (userChoice == "west" || userChoice == "WEST")
+                if (userChoice == "west")
                 {
                     navigator = true;
                 }
-            } else if (userChoice == "right" || userChoice == "RIGHT" || userChoice == "east" || userChoice == "EAST")
+            } else if (userChoice == "right" || userChoice == "east")
             {
                 //go right
-                if (userChoice == "east" || userChoice == "EAST")
+                if (userChoice == "east")
                 {
                     navigator = true;
                 }
+            } else if (userChoice == "down")
+            {
+                //try to dig down
+            } else if (userChoice == "back" || userChoice == "south")
+            {
+                //start program over? or say they go then come back
+            } else if (userChoice == "up")
+            {
+                //you hop but land on the same ground
+            } else if (userChoice == "forward" || userChoice == "north")
+            {
+                //true ending, you go forward and find your name that they took from you
             } else
             {
                 //user typed in something else
